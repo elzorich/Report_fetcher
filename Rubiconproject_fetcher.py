@@ -55,6 +55,7 @@ except OSError as err:
 browser.execute_script("document.querySelectorAll('.dropdown.toolbar-btn .menu')[2].style.display = 'block'")
 
 time.sleep(10)
+
 try:
     report = WebDriverWait(browser, 10).until(
         EC.presence_of_element_located((By.XPATH, '//button[text()="Export as Excel"]'))
